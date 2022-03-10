@@ -69,7 +69,7 @@ func main() {
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-	temp := Embed{"Hello Golang!", "こんにちは！", usr, time.Now()}
+	temp := Embed{"Hello Golang!", "こんにちは", usr, time.Now()}
 	if err := templates["index"].Execute(w, temp); err != nil {
 		log.Printf("failed to execute template: %v", err)
 	}
